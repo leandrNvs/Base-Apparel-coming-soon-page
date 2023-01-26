@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+:root {
+  --Desaturated-Red: hsl(0, 36%, 70%);
+  --Soft-Red: hsl(0, 93%, 68%);
+  --Dark-Grayish-Red: hsl(0, 6%, 24%);
+}
+
+body {
+  background-image: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+}
+
+.container {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.logo {
+  width: 10rem;
+  padding: 1.5rem 2rem 1.5rem;
+  display: block;
+}
+
+.hero__desktop {
+  display: none;
+}
+
+.hero__mobile {
+  margin-bottom: 2.5rem;
+  width: 100%;
+  max-height: 260px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.title {
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  margin-bottom: 1.2rem;
+  font-size: 2.3rem;
+}
+
+.title span:first-child {
+  color: var(--Desaturated-Red);
+  font-weight: 300;
+  display: block;
+}
+
+.text {
+  color: var(--Desaturated-Red);
+  line-height: 1.5;
+}
+
+.content {
+  padding: 0 2rem;
+  max-width: 550px;
+  margin: auto;
+}
+
+.form {
+  border: 1px solid var(--Desaturated-Red);
+  border-radius: 2rem;
+  margin-top: 2rem;
+  position: relative;
+  display: flex;
+}
+
+.form.error {
+  border: 2px solid var(--Soft-Red);
+}
+
+.form.error > img {
+  display: block;
+}
+
+.form.error + .helper-text {
+  display: block;
+}
+
+.form input {
+  border: 0;
+  padding: 1rem;
+  background-color: transparent;
+  margin-left: 0.2rem;
+}
+
+.form input::placeholder {
+  color: var(--Desaturated-Red);
+}
+
+.form > img {
+  align-self: center;
+  margin-right: 0.4rem;
+  position: absolute;
+  left: 65%;
+  display: none;
+}
+
+.form > button {
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border: 0;
+  border-radius: 2rem;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  transition: 0.3s;
+}
+
+.form button:hover {
+  transform: scale(1.2);
+}
+
+.helper-text {
+  color: var(--Soft-Red);
+  text-align: left;
+  margin: 0.5rem 0 0 1.3rem;
+  font-size: 14px;
+  display: none;
+}
+
+@media (min-width: 1100px) {
+  .container {
+    display: flex;
+    padding-bottom: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+  }
+
+  .container__background {
+    background-image: url("../images/bg-pattern-desktop.svg");
+    background-size: cover;
+  }
+
+  .logo {
+    width: 14rem;
+    margin-left: 10rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+  }
+
+  .content {
+    max-width: 500px;
+    text-align: left;
+    margin-left: 10rem;
+  }
+
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .hero__mobile {
+    display: none;
+  }
+
+  .hero__desktop {
+    display: block;
+  }
+}
